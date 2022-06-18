@@ -19,10 +19,11 @@
 
 # Add prepareCompile
 disablePkgsList="
-./feeds/small8/diy/
-./feeds/small8/mbedtls/
-./feeds/small8/my-autocore/
-./feeds/small8/my-default-settings/
+./feeds/luci/applications/luci-app-argon-config
+./feeds/luci/themes/luci-theme-argon
+./feeds/kenzo/luci-app-argon-config
+./feeds/kenzo/luci-theme-argon
+./feeds/kenzo/luci-theme-argonne
 "
 
 function disableDulicatedPkg()
