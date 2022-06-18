@@ -19,7 +19,10 @@
 
 # Add prepareCompile
 disablePkgsList="
+./feeds/small8/diy/
 ./feeds/small8/mbedtls/
+./feeds/small8/my-autocore/
+./feeds/small8/my-default-settings/
 "
 
 function disableDulicatedPkg()
