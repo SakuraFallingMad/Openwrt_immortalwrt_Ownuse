@@ -19,9 +19,8 @@
 
 # Add prepareCompile
 disablePkgsList="
-./feeds/luci/applications/luci-app-argon-config
-./feeds/luci/themes/luci-theme-argon
 ./feeds/kenzo/luci-app-argon-config
+./feeds/kenzo/luci-app-argonne-config
 ./feeds/kenzo/luci-theme-argon
 ./feeds/kenzo/luci-theme-argonne
 "
