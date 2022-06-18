@@ -6,4 +6,4 @@ src-git pw_packages https://github.com/xiaorouji/openwrt-passwall.git;packages
 src-git pw_luci https://github.com/xiaorouji/openwrt-passwall.git;luci
 src-git pw2_luci https://github.com/xiaorouji/openwrt-passwall2.git
 src-git lienol https://github.com/homelede/openwrt-package.git;main
-src-git kenzo https://github.com/kenzok8/openwrt-packages
+src-git small8 https://github.com/kenzok8/small-package
