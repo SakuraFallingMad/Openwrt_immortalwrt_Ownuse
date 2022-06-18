@@ -20,13 +20,10 @@
 # Add prepareCompile
 disablePkgsList="
 ./feeds/luci/applications/luci-app-softethervpn
-./feeds/small8/diy
-./feeds/small8/luci-app-argon-config
-./feeds/small8/luci-app-argonne-config
-./feeds/small8/luci-theme-argon
-./feeds/small8/luci-theme-argonne
-./feeds/small8/my-autocore
-./feeds/small8/my-default-settings
+./feeds/kenzo/luci-app-argon-config
+./feeds/kenzo/luci-app-argonne-config
+./feeds/kenzo/luci-theme-argon
+./feeds/kenzo/luci-theme-argonne
 "
 
 function disableDulicatedPkg()
