@@ -24,6 +24,7 @@ disablePkgsList="
 ./feeds/kenzo/luci-theme-argon
 ./feeds/kenzo/luci-theme-argonne
 ./feeds/luci/applications/luci-app-softethervpn
+./feeds/luci/themes/luci-theme-argon
 ./feeds/packages/net/adguardhome
 "
 
