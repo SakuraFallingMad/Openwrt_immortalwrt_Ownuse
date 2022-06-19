@@ -4333,7 +4333,7 @@ CONFIG_PACKAGE_libnetfilter-conntrack=y
 # CONFIG_PACKAGE_libnetfilter-cttimeout is not set
 # CONFIG_PACKAGE_libnetfilter-log is not set
 # CONFIG_PACKAGE_libnetfilter-queue is not set
-# CONFIG_PACKAGE_libnetsnmp is not set
+CONFIG_PACKAGE_libnetsnmp=y
 CONFIG_PACKAGE_libnettle=y
 
 #
@@ -4374,7 +4374,7 @@ CONFIG_PACKAGE_libnl-tiny=y
 # CONFIG_PACKAGE_libpam is not set
 # CONFIG_PACKAGE_libpbc is not set
 # CONFIG_PACKAGE_libpcap is not set
-# CONFIG_PACKAGE_libpci is not set
+CONFIG_PACKAGE_libpci=y
 # CONFIG_PACKAGE_libpciaccess is not set
 CONFIG_PACKAGE_libpcre=y
 CONFIG_PCRE_JIT_ENABLED=y
@@ -4857,7 +4857,7 @@ CONFIG_PACKAGE_luci-app-serverchan=y
 # CONFIG_PACKAGE_luci-app-simple-adblock is not set
 CONFIG_PACKAGE_luci-app-smartdns=y
 # CONFIG_PACKAGE_luci-app-smstool is not set
-# CONFIG_PACKAGE_luci-app-snmpd is not set
+CONFIG_PACKAGE_luci-app-snmpd=y
 CONFIG_PACKAGE_luci-app-socat=y
 # CONFIG_PACKAGE_luci-app-softether is not set
 CONFIG_PACKAGE_luci-app-softethervpn=y
@@ -6659,7 +6659,7 @@ CONFIG_SAMBA4_SERVER_WSDD2=y
 CONFIG_SAMBA4_SERVER_NETBIOS=y
 CONFIG_SAMBA4_SERVER_AVAHI=y
 CONFIG_SAMBA4_SERVER_VFS=y
-# CONFIG_SAMBA4_SERVER_VFSX is not set
+CONFIG_SAMBA4_SERVER_VFSX=y
 # CONFIG_SAMBA4_SERVER_AD_DC is not set
 # CONFIG_PACKAGE_samba4-utils is not set
 # CONFIG_PACKAGE_samplicator is not set
@@ -6677,10 +6677,10 @@ CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_smbinfo is not set
 # CONFIG_PACKAGE_snmp-mibs is not set
 # CONFIG_PACKAGE_snmp-utils is not set
-# CONFIG_PACKAGE_snmpd is not set
+CONFIG_PACKAGE_snmpd=y
 # CONFIG_PACKAGE_snmptrapd is not set
 CONFIG_PACKAGE_socat=y
-# CONFIG_SOCAT_SSL is not set
+CONFIG_SOCAT_SSL=y
 # CONFIG_PACKAGE_softflowd is not set
 # CONFIG_PACKAGE_soloscli is not set
 # CONFIG_PACKAGE_speedtest-cli is not set
