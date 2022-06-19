@@ -5,9 +5,6 @@ CONFIG_DROPBEAR_ECC=y
 CONFIG_DROPBEAR_ECC_FULL=y
 # CONFIG_FEED_kenzo is not set
 # CONFIG_FEED_lienol is not set
-# CONFIG_FEED_pw2_luci is not set
-# CONFIG_FEED_pw_luci is not set
-# CONFIG_FEED_pw_packages is not set
 CONFIG_GNUTLS_ALPN=y
 CONFIG_GNUTLS_ANON=y
 CONFIG_GNUTLS_CRYPTODEV=y
