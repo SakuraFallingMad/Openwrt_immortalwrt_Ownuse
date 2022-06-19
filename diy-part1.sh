@@ -19,11 +19,12 @@
 
 # Add prepareCompile
 disablePkgsList="
-./feeds/luci/applications/luci-app-softethervpn
 ./feeds/kenzo/luci-app-argon-config
 ./feeds/kenzo/luci-app-argonne-config
 ./feeds/kenzo/luci-theme-argon
 ./feeds/kenzo/luci-theme-argonne
+./feeds/luci/applications/luci-app-softethervpn
+./feeds/packages/net/adguardhome
 "
 
 function disableDulicatedPkg()
