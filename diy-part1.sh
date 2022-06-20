@@ -25,6 +25,7 @@ disablePkgsList="
 ./feeds/kenzo/luci-theme-argonne
 ./feeds/luci/applications/luci-app-softethervpn
 ./feeds/packages/net/adguardhome
+./feeds/packages/net/mosdns
 "
 
 function disableDulicatedPkg()
