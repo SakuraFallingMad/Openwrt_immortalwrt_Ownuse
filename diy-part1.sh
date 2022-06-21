@@ -19,13 +19,22 @@
 
 # Add prepareCompile
 disablePkgsList="
-./feeds/kenzo/luci-app-argon-config
-./feeds/kenzo/luci-app-argonne-config
-./feeds/kenzo/luci-theme-argon
-./feeds/kenzo/luci-theme-argonne
 ./feeds/luci/applications/luci-app-softethervpn
 ./feeds/packages/net/adguardhome
 ./feeds/packages/net/mosdns
+./feeds/small8/diy
+./feeds/small8/luci-app-argon-config
+./feeds/small8/luci-app-argonne-config
+./feeds/small8/luci-app-mentohust
+./feeds/small8/luci-app-minieap
+./feeds/small8/luci-proto-minieap
+./feeds/small8/luci-theme-argon
+./feeds/small8/luci-theme-argonne
+./feeds/small8/MentoHUST-OpenWrt-ipk
+./feeds/small8/mbedtls
+./feeds/small8/my-default-settings
+./feeds/small8/oaf
+./feeds/small8/openwrt-minieap
 "
 
 function disableDulicatedPkg()
