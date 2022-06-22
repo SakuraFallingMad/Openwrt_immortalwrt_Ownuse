@@ -1671,8 +1671,9 @@ CONFIG_ZABBIX_POSTGRESQL=y
 # CONFIG_PACKAGE_debian-archive-keyring is not set
 # CONFIG_PACKAGE_debootstrap is not set
 # CONFIG_PACKAGE_gkrellmd is not set
-# CONFIG_PACKAGE_gotop is not set
-# CONFIG_PACKAGE_htop is not set
+CONFIG_PACKAGE_gotop=y
+CONFIG_PACKAGE_htop=y
+CONFIG_HTOP_LMSENSORS=y
 # CONFIG_PACKAGE_ipmitool is not set
 # CONFIG_PACKAGE_monit is not set
 # CONFIG_PACKAGE_monit-nossl is not set
@@ -5012,7 +5013,7 @@ CONFIG_PACKAGE_luci-app-wireguard=y
 # CONFIG_PACKAGE_luci-app-wizard is not set
 CONFIG_PACKAGE_luci-app-wol=y
 # CONFIG_PACKAGE_luci-app-wolplus is not set
-# CONFIG_PACKAGE_luci-app-wrtbwmon is not set
+CONFIG_PACKAGE_luci-app-wrtbwmon=y
 # CONFIG_PACKAGE_luci-app-xinetd is not set
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
 # CONFIG_PACKAGE_luci-app-yggdrasil is not set
@@ -5561,6 +5562,7 @@ CONFIG_PACKAGE_luci-i18n-wol-en=y
 # CONFIG_PACKAGE_luci-i18n-wol-vi is not set
 CONFIG_PACKAGE_luci-i18n-wol-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-wol-zh-tw is not set
+CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
 # end of LuCI
 
 #
@@ -6295,7 +6297,7 @@ CONFIG_PACKAGE_ip-full=y
 #
 # Tools
 #
-# CONFIG_PACKAGE_wrtbwmon is not set
+CONFIG_PACKAGE_wrtbwmon=y
 # end of Tools
 
 #
