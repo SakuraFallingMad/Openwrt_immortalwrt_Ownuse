@@ -39,7 +39,7 @@ config global_forwarding
 	option tcp_proxy_way 'redirect'
 	option ipv6_tproxy '0'
 	option sniffing '1'
-	option route_only '0'
+	option route_only '1'
 
 config global_other
 	option nodes_ping 'auto_ping tcping'
@@ -85,8 +85,8 @@ config nodes 'myshunt'
 	option remarks '分流总节点'
 	option type 'Xray'
 	option protocol '_shunt'
-	option ForceReject '_blackhole'
-	option ForceDirect '_direct'
+	option Force_Reject '_blackhole'
+	option Force_Direct '_direct'
 	option AD '_blackhole'
 	option BT '_direct'
 	option Telegram 'nil'
@@ -95,11 +95,11 @@ config nodes 'myshunt'
 	option TVB 'nil'
 	option China 'nil'
 	option default_node 'nil'
-	option domainStrategy 'IPOnDemand'
+	option domainStrategy 'AsIs'
 	option domainMatcher 'hybrid'
 
-config shunt_rules 'ForceReject'
-	option remarks 'ForceReject'
+config shunt_rules 'Force_Reject'
+	option remarks 'Force_Reject'
 	option domain_list 'regexp:(.*\.|)(acl4ssr-sub)\.(github.io)
 regexp:(.*\.|)(beijingspring|chinaaffairs|chengmingmag|dafahao|dongtaiwang|epochweekly|epochtimes)\.(cn|org|com)
 regexp:(.*\.|)(beyondbenefit)\.(com)
@@ -122,8 +122,8 @@ regexp:(\.|)zhengwunet\.org
 regexp:(^.*\@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|bccto|chacuo|027168)\.(info|biz|com|de|net|org|me|la)
 '
 
-config shunt_rules 'ForceDirect'
-	option remarks 'ForceDirect'
+config shunt_rules 'Force_Direct'
+	option remarks 'Force_Direct'
 	option domain_list 'regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
 regexp:(Subject|HELO|SMTP)
 regexp:(torrent|\.torrent|peer_id=|announce|info_hash|get_peers|find_node|BitTorrent|announce_peer|protocol|announce\.php\?passkey=)

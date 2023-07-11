@@ -30,7 +30,7 @@ config global_forwarding
 	option tcp_proxy_way 'redirect'
 	option ipv6_tproxy '0'
 	option sniffing '1'
-	option route_only '0'
+	option route_only '1'
 
 config global_other
 	option nodes_ping 'auto_ping tcping'
@@ -81,7 +81,7 @@ config nodes 'myshunt'
 	option QUIC '_blackhole'
 	option UDP 'nil'
 	option default_node 'nil'
-	option domainStrategy 'IPOnDemand'
+	option domainStrategy 'AsIs'
 	option domainMatcher 'hybrid'
 
 config shunt_rules 'LAN'
