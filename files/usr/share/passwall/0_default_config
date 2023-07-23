@@ -39,7 +39,7 @@ config global_forwarding
 	option tcp_proxy_way 'redirect'
 	option ipv6_tproxy '0'
 	option sniffing '1'
-	option route_only '1'
+	option route_only '0'
 
 config global_other
 	option nodes_ping 'auto_ping tcping'
@@ -95,7 +95,7 @@ config nodes 'myshunt'
 	option TVB 'nil'
 	option China 'nil'
 	option default_node 'nil'
-	option domainStrategy 'AsIs'
+	option domainStrategy 'IPOnDemand'
 	option domainMatcher 'hybrid'
 
 config shunt_rules 'Force_Reject'
