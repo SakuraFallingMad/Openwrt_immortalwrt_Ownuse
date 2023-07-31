@@ -17,7 +17,7 @@ config global
 	option close_log_tcp '0'
 	option close_log_udp '0'
 	option loglevel 'error'
-	option trojan_loglevel '3'
+	option trojan_loglevel '4'
 
 config global_haproxy
 	option balancing_enable '0'
@@ -34,7 +34,7 @@ config global_forwarding
 	option udp_proxy_drop_ports '80,443'
 	option tcp_redir_ports '22,25,53,143,465,587,853,993,995,80,443'
 	option udp_redir_ports '1:65535'
-	option accept_icmp '1'
+	option accept_icmp '0'
 	option use_nft '0'
 	option tcp_proxy_way 'redirect'
 	option ipv6_tproxy '0'
@@ -52,10 +52,13 @@ config global_rules
 	option gfwlist_update '1'
 	option geosite_update '1'
 	option geoip_update '1'
-	list gfwlist_url 'https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/greatfire.txt'
+	list gfwlist_url 'https://cdn.jsdelivr.net/gh/pmkol/easymosdns@rules/gfw_domain_list.txt'
+	list chnroute_url 'https://cdn.jsdelivr.net/gh/misakaio/chnroutes2@master/chnroutes.txt'
+	list chnroute_url 'https://cdn.jsdelivr.net/gh/pexcn/daily@gh-pages/chnroute/chnroute.txt'
 	list chnroute_url 'https://cdn.jsdelivr.net/gh/gaoyifan/china-operator-ip@ip-lists/china.txt'
+	list chnroute6_url 'https://cdn.jsdelivr.net/gh/pexcn/daily@gh-pages/chnroute/chnroute6.txt'
 	list chnroute6_url 'https://cdn.jsdelivr.net/gh/gaoyifan/china-operator-ip@ip-lists/china6.txt'
-	list chnlist_url 'https://cdn.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf'
+	list chnlist_url 'https://cdn.jsdelivr.net/gh/pmkol/easymosdns@rules/china_domain_list.txt'
 	option v2ray_location_asset '/usr/share/v2ray/'
 
 config global_app
@@ -91,13 +94,14 @@ config nodes 'myshunt'
 	option BT '_direct'
 	option Direct_Game '_direct'
 	option Proxy_Game 'nil'
+	option OpenAI 'nil'
 	option Telegram 'nil'
 	option YouTube 'nil'
 	option Netflix 'nil'
 	option TVB 'nil'
 	option China 'nil'
 	option default_node 'nil'
-	option domainStrategy 'IPOnDemand'
+	option domainStrategy 'IPIfNonMatch'
 	option domainMatcher 'hybrid'
 
 config shunt_rules 'Force_Reject'
@@ -121,21 +125,18 @@ regexp:(\.|)qhimg\.com
 regexp:(\.|)qihoo\.com
 regexp:(\.|)so\.com
 regexp:(\.|)zhengwunet\.org
-regexp:(^.*\@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|bccto|chacuo|027168)\.(info|biz|com|de|net|org|me|la)
-'
+regexp:(^.*\@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|bccto|chacuo|027168)\.(info|biz|com|de|net|org|me|la)'
 
 config shunt_rules 'Force_Direct'
 	option remarks 'Force_Direct'
 	option domain_list 'regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
 regexp:(Subject|HELO|SMTP)
 regexp:(torrent|\.torrent|peer_id=|announce|info_hash|get_peers|find_node|BitTorrent|announce_peer|protocol|announce\.php\?passkey=)
-regexp:(torrent|\.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce\.php\?passkey=)
-'
+regexp:(torrent|\.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce\.php\?passkey=)'
 
 config shunt_rules 'AD'
 	option remarks 'AD'
-	option domain_list 'geosite:category-ads-all
-'
+	option domain_list 'geosite:category-ads-all'
 
 config shunt_rules 'BT'
 	option remarks 'BT'
@@ -146,8 +147,7 @@ config shunt_rules 'Direct_Game'
 	option domain_list 'api.steampowered.com
 regexp:\.cm.steampowered.com$
 regexp:\.steamserver.net$
-geosite:category-games@cn
-'
+geosite:category-games@cn'
 	option ip_list '103.10.124.0/24
 103.10.125.0/24
 103.28.54.0/24
@@ -193,32 +193,29 @@ geosite:category-games@cn
 208.64.201.0/24
 208.64.202.0/24
 208.64.203.0/24
-208.78.164.0/22
-'
+208.78.164.0/22'
 
 config shunt_rules 'Proxy_Game'
 	option remarks 'Proxy_Game'
-	option domain_list 'geosite:category-games@!cn
-'
+	option domain_list 'geosite:category-games@!cn'
+
+config shunt_rules 'OpenAI'
+	option remarks 'OpenAI'
+	option domain_list 'geosite:openai'
 
 config shunt_rules 'Telegram'
 	option remarks 'Telegram'
-	option domain_list 'geosite:telegram
-'
-	option ip_list 'geoip:telegram
-'
+	option domain_list 'geosite:telegram'
+	option ip_list 'geoip:telegram'
 
 config shunt_rules 'YouTube'
 	option remarks 'YouTube'
-	option domain_list 'geosite:youtube
-'
+	option domain_list 'geosite:youtube'
 
 config shunt_rules 'Netflix'
 	option remarks 'Netflix'
-	option domain_list 'geosite:netflix
-'
-	option ip_list 'geoip:netflix
-'
+	option domain_list 'geosite:netflix'
+	option ip_list 'geoip:netflix'
 
 config shunt_rules 'TVB'
 	option remarks 'TVB'
@@ -230,12 +227,9 @@ geosite:hkgolden
 geosite:hkopentv
 geosite:hkt
 geosite:rthk
-geosite:tvb
-'
+geosite:tvb'
 
 config shunt_rules 'China'
 	option remarks 'China'
-	option domain_list 'geosite:cn
-'
-	option ip_list 'geoip:cn
-'
+	option domain_list 'geosite:cn'
+	option ip_list 'geoip:cn'
