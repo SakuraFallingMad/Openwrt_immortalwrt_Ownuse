@@ -19,11 +19,11 @@
 
 # Add prepareCompile
 disablePkgsList="
+./feeds/luci/applications/luci-app-wechatpush
 ./feeds/kenzo/luci-app-argon-config
-./feeds/kenzo/luci-app-argonne-config
-./feeds/kenzo/luci-app-serverchan
+./feeds/kenzo/luci-app-argone-config
 ./feeds/kenzo/luci-theme-argon
-./feeds/kenzo/luci-theme-argonne
+./feeds/kenzo/luci-theme-argone
 "
 
 function disableDulicatedPkg()
