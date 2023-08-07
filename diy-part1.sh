@@ -22,6 +22,7 @@ disablePkgsList="
 ./feeds/luci/applications/luci-app-wechatpush
 ./feeds/kenzo/luci-app-argon-config
 ./feeds/kenzo/luci-app-argone-config
+./feeds/kenzo/luci-app-serverchan
 ./feeds/kenzo/luci-theme-argon
 ./feeds/kenzo/luci-theme-argone
 "
