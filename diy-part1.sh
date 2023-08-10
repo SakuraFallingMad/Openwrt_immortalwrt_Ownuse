@@ -19,6 +19,7 @@
 
 # Add prepareCompile
 disablePkgsList="
+./feeds/luci/applications/luci-app-passwall
 ./feeds/luci/applications/luci-app-wechatpush
 ./feeds/kenzo/luci-app-argon-config
 ./feeds/kenzo/luci-app-argone-config
