@@ -129,7 +129,11 @@ regexp:(^.*\@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|b
 
 config shunt_rules 'Force_Direct'
 	option remarks 'Force_Direct'
-	option domain_list 'regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
+	option domain_list 'domain:softether-network.net
+full:checkip.synology.com
+full:checkipv6.synology.com
+full:ddns.synology.com
+regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
 regexp:(Subject|HELO|SMTP)
 regexp:(torrent|\.torrent|peer_id=|announce|info_hash|get_peers|find_node|BitTorrent|announce_peer|protocol|announce\.php\?passkey=)
 regexp:(torrent|\.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce\.php\?passkey=)'
