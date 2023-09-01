@@ -34,12 +34,13 @@ config global_forwarding
 	option udp_proxy_drop_ports '80,443'
 	option tcp_redir_ports '22,25,53,143,465,587,853,993,995,80,443'
 	option udp_redir_ports '1:65535'
-	option accept_icmp '0'
-	option use_nft '0'
-	option tcp_proxy_way 'redirect'
-	option ipv6_tproxy '0'
+	option accept_icmp '1'
+	option accept_icmpv6 '1'
+	option use_nft '1'
+	option tcp_proxy_way 'tproxy'
+	option ipv6_tproxy '1'
 	option sniffing '1'
-	option route_only '0'
+	option route_only '1'
 
 config global_other
 	option nodes_ping 'auto_ping tcping'
@@ -77,13 +78,6 @@ config global_subscribe
 	list filter_discard_list '官网'
 	list filter_discard_list '续费'
 
-config auto_switch
-	option enable '0'
-	option testing_time '1'
-	option connect_timeout '3'
-	option retry_num '3'
-	option shunt_logic '1'
-
 config nodes 'myshunt'
 	option remarks '分流总节点'
 	option type 'Xray'
@@ -101,31 +95,31 @@ config nodes 'myshunt'
 	option TVB 'nil'
 	option China 'nil'
 	option default_node 'nil'
-	option domainStrategy 'IPIfNonMatch'
+	option domainStrategy 'AsIs'
 	option domainMatcher 'hybrid'
 
 config shunt_rules 'Force_Reject'
 	option remarks 'Force_Reject'
-	option domain_list 'regexp:(.*\.|)(acl4ssr-sub)\.(github.io)
-regexp:(.*\.|)(beijingspring|chinaaffairs|chengmingmag|dafahao|dongtaiwang|epochweekly|epochtimes)\.(cn|org|com)
-regexp:(.*\.|)(beyondbenefit)\.(com)
-regexp:(.*\.|)(cloudtest)\.(cc)
-regexp:(.*\.|)(dafahao|minghui|dongtaiwang|epochtimes|ntdtv|falundafa|wujieliulan)\.(org|com|net)
-regexp:(.*\.|)(falundafa|ifjc|minghui|ntdtv|open|bannedboot|secretchina|tuidang|wujieliulan|zhuichaguoji)\.(cn|org|com)
-regexp:(.*\.|)(metatrader4|metatrader5|mql5)\.(org|com|net)
-regexp:(\.|)360kan\.com
-regexp:(\.|)360safe\.com
-regexp:(\.|)360totalsecurity\.com
-regexp:(\.|)360\.(cn|com)
-regexp:(\.|)aboluowang\.com
-regexp:(\.|)gtv\.org
-regexp:(\.|)kingdomsalvation\.org
-regexp:(\.|)li-hongzhi-master\.org
-regexp:(\.|)qhimg\.com
-regexp:(\.|)qihoo\.com
-regexp:(\.|)so\.com
-regexp:(\.|)zhengwunet\.org
-regexp:(^.*\@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|bccto|chacuo|027168)\.(info|biz|com|de|net|org|me|la)'
+	option domain_list 'regexp:(.*\.|)(acl4ssr-sub)\.(github.io)$
+regexp:(.*\.|)(beijingspring|chinaaffairs|chengmingmag|dafahao|dongtaiwang|epochweekly|epochtimes)\.(cn|org|com)$
+regexp:(.*\.|)(beyondbenefit)\.(com)$
+regexp:(.*\.|)(cloudtest)\.(cc)$
+regexp:(.*\.|)(dafahao|minghui|dongtaiwang|epochtimes|ntdtv|falundafa|wujieliulan)\.(org|com|net)$
+regexp:(.*\.|)(falundafa|ifjc|minghui|ntdtv|open|bannedboot|secretchina|tuidang|wujieliulan|zhuichaguoji)\.(cn|org|com)$
+regexp:(.*\.|)(metatrader4|metatrader5|mql5)\.(org|com|net)$
+regexp:(\.|)360kan\.com$
+regexp:(\.|)360safe\.com$
+regexp:(\.|)360totalsecurity\.com$
+regexp:(\.|)360\.(cn|com)$
+regexp:(\.|)aboluowang\.com$
+regexp:(\.|)gtv\.org$
+regexp:(\.|)kingdomsalvation\.org$
+regexp:(\.|)li-hongzhi-master\.org$
+regexp:(\.|)qhimg\.com$
+regexp:(\.|)qihoo\.com$
+regexp:(\.|)so\.com$
+regexp:(\.|)zhengwunet\.org$
+regexp:(^.*\@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|bccto|chacuo|027168)\.(info|biz|com|de|net|org|me|la)$'
 
 config shunt_rules 'Force_Direct'
 	option remarks 'Force_Direct'
@@ -133,10 +127,10 @@ config shunt_rules 'Force_Direct'
 full:checkip.synology.com
 full:checkipv6.synology.com
 full:ddns.synology.com
-regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
-regexp:(Subject|HELO|SMTP)
-regexp:(torrent|\.torrent|peer_id=|announce|info_hash|get_peers|find_node|BitTorrent|announce_peer|protocol|announce\.php\?passkey=)
-regexp:(torrent|\.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce\.php\?passkey=)'
+regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)$
+regexp:(Subject|HELO|SMTP)$
+regexp:(torrent|\.torrent|peer_id=|announce|info_hash|get_peers|find_node|BitTorrent|announce_peer|protocol|announce\.php\?passkey=)$
+regexp:(torrent|\.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce\.php\?passkey=)$'
 
 config shunt_rules 'AD'
 	option remarks 'AD'
