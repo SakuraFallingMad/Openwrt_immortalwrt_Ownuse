@@ -31,5 +31,5 @@ done
 if [ ! -f .config ];then
 cp myconfig .config
 echo "Default .config created."
-make defconfig
 fi
+sed -i 's/192.168.1.1/192.168.86.1/g' package/base-files/files/bin/config_generate
