@@ -125,7 +125,7 @@ regexp:(^.*\@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|b
 
 config shunt_rules 'Force_Direct'
 	option remarks 'Force_Direct'
-	option domain_list 'domain:softether-network.net
+	option domain_list 'domain:ddns.softether-network.net
 full:checkip.synology.com
 full:checkipv6.synology.com
 full:ddns.synology.com
