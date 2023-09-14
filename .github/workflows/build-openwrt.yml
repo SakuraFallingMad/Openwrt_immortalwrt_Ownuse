@@ -58,7 +58,7 @@ jobs:
         large-packages: false
         swap-storage: false
         docker-images: true
-        tools-cache: false
+        tools-cache: true
 
     - name: Clone source code
       working-directory: /workdir
