@@ -55,8 +55,8 @@ jobs:
         android: true
         dotnet: true
         haskell: true
-        large-packages: false
-        swap-storage: false
+        large-packages: true
+        swap-storage: true
         docker-images: true
         tools-cache: true
 
@@ -169,7 +169,7 @@ jobs:
       uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 1
-        keep_minimum_runs: 3
+        keep_minimum_runs: 1
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
