@@ -113,7 +113,6 @@ CONFIG_PACKAGE_default-settings-chn=y
 CONFIG_PACKAGE_dns2socks=y
 CONFIG_PACKAGE_dns2tcp=y
 CONFIG_PACKAGE_dnscrypt-proxy2=y
-CONFIG_PACKAGE_dnsmasq_full_ipset=y
 CONFIG_PACKAGE_ebtables-nft=y
 CONFIG_PACKAGE_ethtool=y
 CONFIG_PACKAGE_giflib-utils=y
@@ -125,10 +124,7 @@ CONFIG_PACKAGE_hysteria=y
 CONFIG_PACKAGE_intel-microcode=y
 CONFIG_PACKAGE_ip-full=y
 CONFIG_PACKAGE_ip6tables-nft=y
-CONFIG_PACKAGE_ipset=y
 CONFIG_PACKAGE_ipt2socks=y
-CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
-CONFIG_PACKAGE_iptables-mod-conntrack-label=y
 CONFIG_PACKAGE_iptables-mod-ipopt=y
 CONFIG_PACKAGE_iptables-nft=y
 CONFIG_PACKAGE_iputils-arping=y
@@ -150,16 +146,11 @@ CONFIG_PACKAGE_kmod-ifb=y
 CONFIG_PACKAGE_kmod-inet-diag=y
 CONFIG_PACKAGE_kmod-ip6-tunnel=y
 CONFIG_PACKAGE_kmod-ip6tables=y
-CONFIG_PACKAGE_kmod-ipt-conntrack=y
-CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
-CONFIG_PACKAGE_kmod-ipt-conntrack-label=y
 CONFIG_PACKAGE_kmod-ipt-core=y
 CONFIG_PACKAGE_kmod-ipt-ipopt=y
-CONFIG_PACKAGE_kmod-ipt-ipset=y
 CONFIG_PACKAGE_kmod-iptunnel6=y
 # CONFIG_PACKAGE_kmod-ledtrig-audio is not set
 CONFIG_PACKAGE_kmod-netlink-diag=y
-CONFIG_PACKAGE_kmod-nf-conncount=y
 CONFIG_PACKAGE_kmod-nf-ipt=y
 CONFIG_PACKAGE_kmod-nf-ipt6=y
 CONFIG_PACKAGE_kmod-nf-socket=y
@@ -197,7 +188,6 @@ CONFIG_PACKAGE_libgcrypt=y
 CONFIG_PACKAGE_libgnutls=y
 CONFIG_PACKAGE_libgpg-error=y
 CONFIG_PACKAGE_libhttp-parser=y
-CONFIG_PACKAGE_libipset=y
 CONFIG_PACKAGE_libiptext=y
 CONFIG_PACKAGE_libiptext-nft=y
 CONFIG_PACKAGE_libiptext6=y
@@ -242,7 +232,6 @@ CONFIG_PACKAGE_luci-app-banip=y
 CONFIG_PACKAGE_luci-app-ddns=y
 CONFIG_PACKAGE_luci-app-ddns-go=y
 CONFIG_PACKAGE_luci-app-firewall=y
-CONFIG_PACKAGE_luci-app-mwan3=y
 CONFIG_PACKAGE_luci-app-netdata=y
 CONFIG_PACKAGE_luci-app-nft-qos=y
 CONFIG_PACKAGE_luci-app-ocserv=y
@@ -277,7 +266,6 @@ CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ddns-go-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ocserv-zh-cn=y
@@ -311,7 +299,6 @@ CONFIG_PACKAGE_luci-ssl-openssl=y
 CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-theme-bootstrap=y
 CONFIG_PACKAGE_microsocks=y
-CONFIG_PACKAGE_mwan3=y
 CONFIG_PACKAGE_naiveproxy=y
 CONFIG_PACKAGE_nano-full=y
 CONFIG_PACKAGE_netdata=y
@@ -399,6 +386,9 @@ CONFIG_boost-compile-visibility-hidden=y
 CONFIG_boost-runtime-shared=y
 CONFIG_boost-static-and-shared-libs=y
 CONFIG_boost-variant-release=y
+# CONFIG_PACKAGE_iptables-mod-conntrack-label is not set
 # CONFIG_PACKAGE_kmod-crypto-kpp is not set
+# CONFIG_PACKAGE_kmod-ipt-conntrack is not set
+# CONFIG_PACKAGE_kmod-ipt-conntrack-label is not set
 # CONFIG_SING_BOX_BUILD_GVISOR is not set
 # CONFIG_SING_BOX_BUILD_SHADOWSOCKSR is not set
