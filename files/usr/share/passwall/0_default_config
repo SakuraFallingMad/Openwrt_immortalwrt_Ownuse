@@ -93,8 +93,6 @@ config nodes 'myshunt'
 	option protocol '_shunt'
 	option Force_Reject '_blackhole'
 	option Force_Direct '_direct'
-	option AD '_blackhole'
-	option BT '_direct'
 	option Direct_Game '_direct'
 	option Proxy_Game 'nil'
 	option OpenAI 'nil'
@@ -140,14 +138,6 @@ regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)$
 regexp:(Subject|HELO|SMTP)$
 regexp:(torrent|\.torrent|peer_id=|announce|info_hash|get_peers|find_node|BitTorrent|announce_peer|protocol|announce\.php\?passkey=)$
 regexp:(torrent|\.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce\.php\?passkey=)$'
-
-config shunt_rules 'AD'
-	option remarks 'AD'
-	option domain_list 'geosite:category-ads-all'
-
-config shunt_rules 'BT'
-	option remarks 'BT'
-	option protocol 'bittorrent'
 
 config shunt_rules 'Direct_Game'
 	option remarks 'Direct_Game'
