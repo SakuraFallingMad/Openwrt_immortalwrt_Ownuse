@@ -39,7 +39,7 @@
 ## To listen to all IPv4 addresses, use `listen_addresses = ['0.0.0.0:53']`
 ## To listen to all IPv4+IPv6 addresses, use `listen_addresses = ['[::]:53']`
 
-listen_addresses = ['127.0.0.1:7053', '[::1]:7053']
+listen_addresses = ['[::1]:7053']
 
 
 ## Maximum number of simultaneous client connections to accept
@@ -143,20 +143,20 @@ keepalive = 30
 ## Using the `hinfo` option means that some responses will be lies.
 ## Unfortunately, the `hinfo` option appears to be required for Android 8+
 
-blocked_query_response = 'refused'
+# blocked_query_response = 'refused'
 
 
 ## Load-balancing strategy: 'p2' (default), 'ph', 'p<n>', 'first' or 'random'
 ## Randomly choose 1 of the fastest 2, half, n, 1 or all live servers by latency.
 ## The response quality still depends on the server itself.
 
-lb_strategy = 'p2'
+# lb_strategy = 'p2'
 
 ## Set to `true` to constantly try to estimate the latency of all the resolvers
 ## and adjust the load-balancing parameters accordingly, or to `false` to disable.
 ## Default is `true` that makes 'p2' `lb_strategy` work well.
 
-lb_estimator = true
+# lb_estimator = true
 
 
 ## Log level (0-6, default: 2 - 0 is very verbose, 6 only contains fatal errors)
@@ -221,6 +221,14 @@ cert_refresh_delay = 240
 ## connecting to some DoH servers.
 
 # tls_cipher_suite = [52392, 49199]
+
+
+## Log TLS key material to a file, for debugging purposes only.
+## This file will contain the TLS master key, which can be used to decrypt
+## all TLS traffic to/from DoH servers.
+## Never ever enable except for debugging purposes with a tool such as mitmproxy.
+
+# tls_key_log_file = '/tmp/keylog.txt'
 
 
 ## Bootstrap resolvers
@@ -340,6 +348,7 @@ block_ipv6 = false
 
 
 ## Immediately respond to A and AAAA queries for host names without a domain name
+## This also prevents "dotless domain names" from being resolved upstream.
 
 block_unqualified = true
 
@@ -687,9 +696,9 @@ format = 'tsv'
 ## If the `urls` property is missing, cache files and valid signatures
 ## must already be present. This doesn't prevent these cache files from
 ## expiring after `refresh_delay` hours.
-## Cache freshness is checked every 24 hours, so values for 'refresh_delay'
-## of less than 24 hours will have no effect.
-## A maximum delay of 168 hours (1 week) is imposed to ensure cache freshness.
+## `refreshed_delay` must be in the [24..168] interval.
+## The minimum delay of 24 hours (1 day) avoids unnecessary requests to servers.
+## The maximum delay of 168 hours (1 week) ensures cache freshness.
 
 [sources]
 
@@ -742,6 +751,14 @@ format = 'tsv'
   #   cache_file = 'parental-control.md'
   #   minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
 
+  ### dnscry.pt servers - See https://www.dnscry.pt
+
+  #  [sources.dnscry-pt-resolvers]
+  #    urls = ["https://www.dnscry.pt/resolvers.md"]
+  #    minisign_key = "RWQM31Nwkqh01x88SvrBL8djp1NH56Rb4mKLHz16K7qsXgEomnDv6ziQ"
+  #    cache_file = "dnscry.pt-resolvers.md"
+  #    refresh_delay = 72
+  #    prefix = "dnscry.pt-"
 
 
 #########################################
