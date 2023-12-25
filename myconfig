@@ -82,6 +82,9 @@ CONFIG_PACKAGE_WECHATPUSH_Enable_Host_Information_Detection=y
 CONFIG_PACKAGE_WECHATPUSH_Enable_Local_Disk_Information_Detection=y
 CONFIG_PACKAGE_acpid=y
 CONFIG_PACKAGE_adguardhome=y
+# CONFIG_PACKAGE_alsa-lib is not set
+# CONFIG_PACKAGE_alsa-ucm-conf is not set
+# CONFIG_PACKAGE_alsa-utils is not set
 CONFIG_PACKAGE_autocore=y
 CONFIG_PACKAGE_avahi-autoipd=y
 CONFIG_PACKAGE_avahi-daemon-service-http=y
@@ -158,6 +161,7 @@ CONFIG_PACKAGE_iptables-nft=y
 CONFIG_PACKAGE_iputils-arping=y
 CONFIG_PACKAGE_jq=y
 CONFIG_PACKAGE_kmod-asn1-decoder=y
+CONFIG_PACKAGE_kmod-ata-core=y
 CONFIG_PACKAGE_kmod-bonding=y
 CONFIG_PACKAGE_kmod-crypto-lib-chacha20=y
 CONFIG_PACKAGE_kmod-crypto-lib-chacha20poly1305=y
@@ -165,11 +169,27 @@ CONFIG_PACKAGE_kmod-crypto-lib-curve25519=y
 CONFIG_PACKAGE_kmod-crypto-lib-poly1305=y
 CONFIG_PACKAGE_kmod-gre=y
 CONFIG_PACKAGE_kmod-gre6=y
+CONFIG_PACKAGE_kmod-hwmon-coretemp=y
+CONFIG_PACKAGE_kmod-hwmon-drivetemp=y
+CONFIG_PACKAGE_kmod-hwmon-jc42=y
+CONFIG_PACKAGE_kmod-i2c-i801=y
+CONFIG_PACKAGE_kmod-i2c-smbus=y
 CONFIG_PACKAGE_kmod-ifb=y
 CONFIG_PACKAGE_kmod-inet-diag=y
+CONFIG_PACKAGE_kmod-ip6-tunnel=y
 CONFIG_PACKAGE_kmod-ipt-core=y
 CONFIG_PACKAGE_kmod-ipt-ipopt=y
+CONFIG_PACKAGE_kmod-iptunnel6=y
+CONFIG_PACKAGE_kmod-leds-mlxcpld=y
+CONFIG_PACKAGE_kmod-lib-objagg=y
+CONFIG_PACKAGE_kmod-lib-parman=y
 CONFIG_PACKAGE_kmod-lib-textsearch=y
+CONFIG_PACKAGE_kmod-mlxfw=y
+CONFIG_PACKAGE_kmod-mlxsw-core=y
+CONFIG_PACKAGE_kmod-mlxsw-i2c=y
+CONFIG_PACKAGE_kmod-mlxsw-minimal=y
+CONFIG_PACKAGE_kmod-mlxsw-pci=y
+CONFIG_PACKAGE_kmod-mlxsw-spectrum=y
 CONFIG_PACKAGE_kmod-netlink-diag=y
 CONFIG_PACKAGE_kmod-nf-ipt=y
 CONFIG_PACKAGE_kmod-nf-nat6=y
@@ -182,9 +202,15 @@ CONFIG_PACKAGE_kmod-nft-compat=y
 CONFIG_PACKAGE_kmod-nft-netdev=y
 CONFIG_PACKAGE_kmod-nft-socket=y
 CONFIG_PACKAGE_kmod-nft-tproxy=y
+CONFIG_PACKAGE_kmod-regmap-i2c=y
+CONFIG_PACKAGE_kmod-sched-act-sample=y
 CONFIG_PACKAGE_kmod-sched-cake=y
+CONFIG_PACKAGE_kmod-sched-core=y
 CONFIG_PACKAGE_kmod-tcp-bbr=y
 CONFIG_PACKAGE_kmod-tun=y
+CONFIG_PACKAGE_kmod-udptunnel4=y
+CONFIG_PACKAGE_kmod-udptunnel6=y
+CONFIG_PACKAGE_kmod-vxlan=y
 CONFIG_PACKAGE_kmod-wireguard=y
 CONFIG_PACKAGE_libatomic=y
 CONFIG_PACKAGE_libattr=y
@@ -312,6 +338,7 @@ CONFIG_PACKAGE_luci-ssl-openssl=y
 CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-theme-bootstrap=y
 CONFIG_PACKAGE_microsocks=y
+CONFIG_PACKAGE_mlxsw_spectrum-firmware=y
 CONFIG_PACKAGE_naiveproxy=y
 CONFIG_PACKAGE_nano-full=y
 CONFIG_PACKAGE_netdata=y
@@ -420,6 +447,35 @@ CONFIG_KERNEL_KPROBE_EVENTS=y
 CONFIG_KERNEL_PERF_EVENTS=y
 # CONFIG_KERNEL_PREEMPT_TRACER is not set
 CONFIG_KERNEL_XDP_SOCKETS=y
+# CONFIG_PACKAGE_beep is not set
+CONFIG_PACKAGE_kmod-ac97=y
 # CONFIG_PACKAGE_kmod-crypto-kpp is not set
+CONFIG_PACKAGE_kmod-ledtrig-audio=y
+# CONFIG_PACKAGE_kmod-pcspkr is not set
+CONFIG_PACKAGE_kmod-sound-core=y
+# CONFIG_PACKAGE_kmod-sound-dummy is not set
+# CONFIG_PACKAGE_kmod-sound-ens1371 is not set
+# CONFIG_PACKAGE_kmod-sound-hda-codec-analog is not set
+# CONFIG_PACKAGE_kmod-sound-hda-codec-ca0110 is not set
+# CONFIG_PACKAGE_kmod-sound-hda-codec-ca0132 is not set
+# CONFIG_PACKAGE_kmod-sound-hda-codec-cirrus is not set
+# CONFIG_PACKAGE_kmod-sound-hda-codec-cmedia is not set
+# CONFIG_PACKAGE_kmod-sound-hda-codec-conexant is not set
+CONFIG_PACKAGE_kmod-sound-hda-codec-hdmi=y
+# CONFIG_PACKAGE_kmod-sound-hda-codec-idt is not set
+CONFIG_PACKAGE_kmod-sound-hda-codec-realtek=y
+# CONFIG_PACKAGE_kmod-sound-hda-codec-si3054 is not set
+CONFIG_PACKAGE_kmod-sound-hda-codec-via=y
+CONFIG_PACKAGE_kmod-sound-hda-core=y
+CONFIG_PACKAGE_kmod-sound-hda-intel=y
+CONFIG_PACKAGE_kmod-sound-i8x0=y
+CONFIG_PACKAGE_kmod-sound-mpu401=y
+# CONFIG_PACKAGE_kmod-sound-seq is not set
+# CONFIG_PACKAGE_kmod-sound-soc-ac97 is not set
+# CONFIG_PACKAGE_kmod-sound-soc-core is not set
+# CONFIG_PACKAGE_kmod-sound-soc-spdif is not set
+# CONFIG_PACKAGE_kmod-sound-soc-wm8960 is not set
+CONFIG_PACKAGE_kmod-sound-via82xx=y
+CONFIG_PACKAGE_kmod-usb-audio=y
 # CONFIG_PACKAGE_kmod-xdp-sockets-diag is not set
 # CONFIG_PACKAGE_perf is not set
