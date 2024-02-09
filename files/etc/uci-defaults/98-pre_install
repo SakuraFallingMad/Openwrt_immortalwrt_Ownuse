@@ -1,0 +1,8 @@
+#!/bin/sh
+
+[ -n "$(ls /etc/pre_install)" ] && opkg install /etc/pre_install/*.ipk --force-depends --force-overwrite --force-downgrade
+rm -rf /etc/pre_install
+rm -rf /etc/config/*-opkg
+rm -rf /etc/smartdns/*-opkg
+
+exit 0
