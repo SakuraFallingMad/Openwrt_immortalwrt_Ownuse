@@ -166,10 +166,12 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
-      uses: SakuraFallingMad/delete-workflow-runs@main
+      uses: SakuraFallingMad/delete-old-workflow-runs@main
       with:
-        retain_days: 1
-        keep_minimum_runs: 1
+        repository: SakuraFallingMad/Openwrt_immortalwrt_Ownuse
+        older-than-seconds: 86400
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@master
