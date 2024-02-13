@@ -30,11 +30,11 @@ jobs:
       id: getHash
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH .
-        echo "::set-output name=commitHash::$(git rev-parse HEAD)"
+        echo "commitHash=$(git rev-parse HEAD)" $GITHUB_OUTPUT
 
     - name: Compare Commit Hash
       id: cacheHash
-      uses: actions/cache@v2
+      uses: actions/cache@v4.0.0
       with:
         path: .commitHash
         key: HEAD-${{ steps.getHash.outputs.commitHash }}
@@ -52,7 +52,7 @@ jobs:
         event-type: Source Code Update
 
     - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+      uses: SakuraFallingMad/delete-workflow-runs@main
       with:
         retain_days: 1
         keep_minimum_runs: 1
