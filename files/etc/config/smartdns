@@ -32,7 +32,6 @@ config server
 	option server_group 'domestic'
 	option exclude_default_group '0'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '1'
@@ -42,7 +41,6 @@ config server
 	option server_group 'domestic'
 	option exclude_default_group '0'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '1'
@@ -52,7 +50,6 @@ config server
 	option server_group 'domestic'
 	option exclude_default_group '0'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '1'
@@ -62,7 +59,6 @@ config server
 	option server_group 'domestic'
 	option exclude_default_group '0'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '1'
@@ -72,7 +68,6 @@ config server
 	option server_group 'domestic'
 	option exclude_default_group '0'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '1'
@@ -82,7 +77,6 @@ config server
 	option server_group 'domestic'
 	option exclude_default_group '0'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '1'
@@ -92,7 +86,6 @@ config server
 	option server_group 'domestic'
 	option exclude_default_group '0'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '1'
@@ -102,7 +95,6 @@ config server
 	option server_group 'domestic'
 	option exclude_default_group '0'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '0'
@@ -112,7 +104,6 @@ config server
 	option server_group 'overseas'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '0'
@@ -122,7 +113,6 @@ config server
 	option server_group 'overseas'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '0'
@@ -132,7 +122,6 @@ config server
 	option server_group 'overseas'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '0'
@@ -142,7 +131,6 @@ config server
 	option server_group 'overseas'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '0'
@@ -152,7 +140,6 @@ config server
 	option server_group 'overseas'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '0'
@@ -162,7 +149,6 @@ config server
 	option server_group 'overseas'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '0'
@@ -172,7 +158,6 @@ config server
 	option server_group 'overseas'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
 
 config server
 	option enabled '0'
@@ -182,4 +167,3 @@ config server
 	option server_group 'overseas'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option addition_arg '-subnet'
