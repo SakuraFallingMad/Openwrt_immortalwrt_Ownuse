@@ -50,7 +50,7 @@ config global_xray
 	option sniffing_override_dest '0'
 
 config global_singbox
-	option sniff_override_destination '1'
+	option sniff_override_destination '0'
 	option geoip_path '/usr/share/singbox/geoip.db'
 	option geoip_url 'https://github.com/malikshi/sing-box-geo/releases/latest/download/geoip.db'
 	option geosite_path '/usr/share/singbox/geosite.db'
@@ -91,20 +91,17 @@ config global_subscribe
 	list filter_discard_list '官网'
 	list filter_discard_list '续费'
 
-config nodes 'myshunt'
+	config nodes 'myshunt'
 	option remarks '分流总节点'
 	option type 'Xray'
 	option protocol '_shunt'
 	option Direct_Game '_direct'
 	option Proxy_Game '_default'
-	option OpenAI '_default'
-	option Telegram '_default'
-	option YouTube '_default'
 	option Netflix '_default'
+	option OpenAI '_default'
 	option China '_direct'
 	option default_node 'nil'
 	option domainStrategy 'IPOnDemand'
-	option domainMatcher 'hybrid'
 
 config shunt_rules 'Direct_Game'
 	option remarks 'Direct_Game'
@@ -161,22 +158,12 @@ geosite:category-games@cn'
 
 config shunt_rules 'Proxy_Game'
 	option remarks 'Proxy_Game'
-	option domain_list 'geosite:category-games'
+	option domain_list 'geosite:category-games
+domain:store.steampowered.com'
 
 config shunt_rules 'OpenAI'
 	option remarks 'OpenAI'
 	option domain_list 'geosite:openai'
-	option ip_list 'geoip:cloudflare'
-
-config shunt_rules 'Telegram'
-	option remarks 'Telegram'
-	option domain_list 'geosite:telegram'
-	option ip_list 'geoip:telegram'
-
-config shunt_rules 'YouTube'
-	option remarks 'YouTube'
-	option domain_list 'geosite:youtube'
-	option ip_list 'geoip:google'
 
 config shunt_rules 'Netflix'
 	option remarks 'Netflix'
