@@ -1,35 +1,55 @@
 #!/bin/bash
 
-# Add ImmortalWrt prepareCompile.sh
-disablePkgsList="
-./feeds/kenzo/luci-app-argon-config
-./feeds/kenzo/luci-app-argone-config
-./feeds/kenzo/luci-app-serverchan
-./feeds/kenzo/luci-theme-argon
-./feeds/kenzo/luci-theme-argone
-"
+# Directories to search and patterns to match
+disablePkgsList=(
+    "feeds/kenzo"
+    "feeds/small"
+)
 
-function disableDulicatedPkg()
-{
-	if [ -d $1 ];then
-		rm -rf $1
-		echo $1" Disabled."
-	fi
+# Function to disable packages using find
+disableDuplicatedPkg() {
+    local baseDir="$1"
+    shift
+    local patterns=("$@")
+
+    for pattern in "${patterns[@]}"; do
+        find "$baseDir" -type d -name "$pattern" -exec rm -rf {} +
+        echo "Disabled packages matching pattern: $pattern in $baseDir"
+    done
 }
 
+# Patterns for each directory
+kenzoPatterns=(
+    "*alist*"
+    "adguardhome"
+    "*smartdns*"
+    "*argon*"
+)
+
+smallPatterns=(
+    "*mosdns*"
+    "*xray*"
+    "*v2ray*"
+    "*sing*"
+)
+
+# Update repository and feeds
 git pull
 ./scripts/feeds update -a
 
-for disablePkg in $disablePkgsList
-do
-	disableDulicatedPkg $disablePkg
-done
+# Disable specified packages
+disableDuplicatedPkg "feeds/kenzo" "${kenzoPatterns[@]}"
+disableDuplicatedPkg "feeds/small" "${smallPatterns[@]}"
 
+# Install feeds
 ./scripts/feeds update -i
 ./scripts/feeds install -a
 
-if [ ! -f .config ];then
-cp myconfig .config
-echo "Default .config created."
+# Check and create .config if missing
+if [ ! -f .config ]; then
+    cp myconfig .config
+    echo "Default .config created."
 fi
+
+# Update default IP address
 sed -i 's/192.168.1.1/192.168.86.1/g' package/base-files/files/bin/config_generate

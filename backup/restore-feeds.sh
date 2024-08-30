@@ -1,15 +1,25 @@
 #!/bin/bash
 
-git checkout . && cd ./feeds
+# List of directories to reset
+directories=(
+    "packages"
+    "luci"
+    "routing"
+    "telephony"
+    "kenzo"
+    "small"
+)
 
-cd ./packages && git checkout . && cd ..
+# Save the initial directory
+initialDir="$(pwd)"
 
-cd ./luci && git checkout . && cd ..
+# Reset changes in the initial directory
+cd "$initialDir" || { echo "Failed to enter initial directory"; exit 1; }
+git checkout . && echo "Reset changes in initial directory"
 
-cd ./routing && git checkout . && cd ..
-
-cd ./telephony && git checkout . && cd ..
-
-cd ./kenzo && git checkout . && cd ..
-
-cd ./small && git checkout . && cd ..
+# Reset changes in each directory
+for dir in "${directories[@]}"; do
+    cd "$initialDir/feeds/$dir" || { echo "Failed to enter directory $dir"; exit 1; }
+    git checkout . && echo "Reset changes in $dir"
+    cd "$initialDir" || { echo "Failed to return to initial directory"; exit 1; }
+done
