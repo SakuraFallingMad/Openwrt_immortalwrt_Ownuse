@@ -6,7 +6,6 @@ directories=(
     "luci"
     "routing"
     "telephony"
-    "kenzo"
     "small"
 )
 

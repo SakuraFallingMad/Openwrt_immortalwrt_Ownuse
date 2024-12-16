@@ -2,7 +2,6 @@
 
 # Directories to search and patterns to match
 disablePkgsList=(
-    "feeds/kenzo"
     "feeds/small"
 )
 
@@ -19,13 +18,6 @@ disableDuplicatedPkg() {
 }
 
 # Patterns for each directory
-kenzoPatterns=(
-    "*alist*"
-    "adguardhome"
-    "*smartdns*"
-    "*argon*"
-)
-
 smallPatterns=(
     "*mosdns*"
     "*xray*"
@@ -38,7 +30,6 @@ git pull
 ./scripts/feeds update -a
 
 # Disable specified packages
-disableDuplicatedPkg "feeds/kenzo" "${kenzoPatterns[@]}"
 disableDuplicatedPkg "feeds/small" "${smallPatterns[@]}"
 
 # Install feeds
