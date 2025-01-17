@@ -1,12 +1,13 @@
 #
-# Copyright (c) 2019-2021 P3TERX <https://p3terx.com>
+# https://github.com/P3TERX/Actions-OpenWrt
+#
+# File: .github/workflows/update-checker.yml
+# Description: Source code update checker
+#
+# Copyright (c) 2019-2024 P3TERX <https://p3terx.com>
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# File: .github/workflows/update-checker.yml
-# Description: Source code update checker
 #
 
 name: Update Checker
@@ -14,11 +15,12 @@ name: Update Checker
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
+  TZ: Asia/Shanghai
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 */3 * * *
+    - cron: 0 */18 * * *
 
 jobs:
   check:
@@ -37,7 +39,7 @@ jobs:
       uses: actions/cache@main
       with:
         path: .commitHash
-        key: HEAD-${{ steps.getHash.outputs.commitHash }}
+        key: commitHash_${{ steps.getHash.outputs.commitHash }}
 
     - name: Save New Commit Hash
       if: steps.cacheHash.outputs.cache-hit != 'true'
