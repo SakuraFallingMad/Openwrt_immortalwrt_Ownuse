@@ -9,7 +9,7 @@ config smartdns
 	option dualstack_ip_selection '1'
 	option prefetch_domain '1'
 	option serve_expired '1'
-	option cache_size '4096'
+	option cache_size '-1'
 	option cache_persist '1'
 	option resolve_local_hostnames '1'
 	option mdns_lookup '1'
