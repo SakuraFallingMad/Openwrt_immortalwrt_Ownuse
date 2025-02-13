@@ -6,7 +6,7 @@ directories=(
     "luci"
     "routing"
     "telephony"
-    "small"
+    "pw"
 )
 
 # Save the initial directory

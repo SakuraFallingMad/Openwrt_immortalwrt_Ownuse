@@ -19,7 +19,8 @@
 
 # Directories to search and patterns to match
 disablePkgsList=(
-    "feeds/small"
+    "feeds/pw"
+    "feeds/packages"
 )
 
 # Function to disable packages using find
@@ -29,17 +30,20 @@ disableDuplicatedPkg() {
     local patterns=("$@")
 
     for pattern in "${patterns[@]}"; do
-        find "$baseDir" -type d -name "$pattern" -exec rm -rf {} +
+        find "$baseDir" -type d -path "$baseDir/$pattern" -exec rm -rf {} +
         echo "Disabled packages matching pattern: $pattern in $baseDir"
     done
 }
 
 # Patterns for each directory
-smallPatterns=(
-    "*mosdns*"
+pwPatterns=(
     "*xray*"
     "*v2ray*"
     "*sing*"
+)
+
+packagesPatterns=(
+    "net/naiveproxy"
 )
 
 # Update repository and feeds
@@ -47,7 +51,8 @@ git pull
 ./scripts/feeds update -a
 
 # Disable specified packages
-disableDuplicatedPkg "feeds/small" "${smallPatterns[@]}"
+disableDuplicatedPkg "feeds/pw" "${pwPatterns[@]}"
+disableDuplicatedPkg "feeds/packages" "${packagesPatterns[@]}"
 
 # Install feeds
 ./scripts/feeds update -i
