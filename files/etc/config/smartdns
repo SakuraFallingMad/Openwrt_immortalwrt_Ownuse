@@ -27,7 +27,7 @@ config domain-rule
 config ip-rule
 
 config server
-	option name 'CN-BOOTSTRAP ALI DOH #1'
+	option name 'CN-BOOTSTRAP ALI DOH'
 	option ip 'https://223.5.5.5/dns-query'
 	option type 'https'
 	option blacklist_ip '1'
@@ -37,27 +37,7 @@ config server
 	option http_host 'dns.alidns.com'
 
 config server
-	option name 'CN-BOOTSTRAP ALI DOH #2'
-	option ip 'https://223.6.6.6/dns-query'
-	option type 'https'
-	option blacklist_ip '1'
-	option enabled '1'
-	option addition_arg '-bootstrap-dns'
-	option host_name 'dns.alidns.com'
-	option http_host 'dns.alidns.com'
-
-config server
-	option name 'CN-BOOTSTRAP DNSPOD DOH #1'
-	option ip 'https://1.12.12.12/dns-query'
-	option type 'https'
-	option blacklist_ip '1'
-	option enabled '1'
-	option addition_arg '-bootstrap-dns'
-	option host_name 'doh.pub'
-	option http_host 'doh.pub'
-
-config server
-	option name 'CN-BOOTSTRAP DNSPOD DOH #2'
+	option name 'CN-BOOTSTRAP DNSPOD DOH'
 	option ip 'https://120.53.53.53/dns-query'
 	option type 'https'
 	option blacklist_ip '1'
@@ -87,15 +67,15 @@ config server
 config server
 	option enabled '1'
 	option name 'CUS- atri DOH'
-	option ip 'https://api.atri.ink/dns-query'
+	option ip 'https://api.atri.zip/dns-query'
 	option type 'https'
 	option server_group 'domestic'
 	option blacklist_ip '1'
-	option host_name 'api.atri.ink'
+	option host_name 'api.atri.zip'
 
 config server
 	option enabled '1'
-	option name 'CUS-18bit DNS DOH'
+	option name 'CUS-18bit DOH'
 	option ip 'https://doh.18bit.cn/dns-query'
 	option type 'https'
 	option server_group 'domestic'
@@ -104,9 +84,18 @@ config server
 
 config server
 	option enabled '1'
-	option name 'CUS-OneDNS DNS DOH'
+	option name 'CUS-OneDNS DOH'
 	option ip 'https://doh-pure.onedns.net/dns-query'
 	option type 'https'
 	option server_group 'domestic'
 	option blacklist_ip '1'
 	option host_name 'doh-pure.onedns.net'
+
+config server
+	option enabled '1'
+	option name 'CUS-ipv4dns DOH'
+	option ip 'https://dns.ipv4dns.com/dns-query'
+	option type 'https'
+	option server_group 'domestic'
+	option blacklist_ip '1'
+	option host_name 'dns.ipv4dns.com'
