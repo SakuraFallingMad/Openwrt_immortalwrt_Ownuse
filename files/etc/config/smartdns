@@ -53,12 +53,10 @@ config server
 	option port '7053'
 	option type 'tcp'
 	option server_group 'overseas'
-	option blacklist_ip '1'
 
 config server
 	option name 'CUS-MappleCool DOH'
 	option type 'https'
-	option blacklist_ip '1'
 	option server_group 'domestic'
 	option ip 'https://doh.apad.pro/dns-query'
 	option enabled '1'
@@ -70,7 +68,6 @@ config server
 	option ip 'https://api.atri.zip/dns-query'
 	option type 'https'
 	option server_group 'domestic'
-	option blacklist_ip '1'
 	option host_name 'api.atri.zip'
 
 config server
