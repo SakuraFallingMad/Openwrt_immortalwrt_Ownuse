@@ -37,13 +37,13 @@ disableDuplicatedPkg() {
 
 # Patterns for each directory
 pwPatterns=(
-    "*xray*"
     "*v2ray*"
     "*sing*"
 )
 
 packagesPatterns=(
     "net/naiveproxy"
+    "net/*xray*"
 )
 
 # Update repository and feeds
