@@ -22,10 +22,10 @@ disableDuplicatedPkg() {
 pwPatterns=(
     "*v2ray*"
     "*sing*"
+    "naiveproxy"
 )
 
 packagesPatterns=(
-    "net/naiveproxy"
     "net/*xray*"
 )
 
