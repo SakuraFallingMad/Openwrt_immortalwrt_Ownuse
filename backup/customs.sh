@@ -4,6 +4,7 @@
 disablePkgsList=(
     "feeds/pw"
     "feeds/packages"
+    "feeds/luci"
 )
 
 # Function to disable packages using find
@@ -29,6 +30,11 @@ packagesPatterns=(
     "net/*xray*"
 )
 
+luciPatterns=(
+    "applications/*argon*"
+    "themes/*argon*"
+)
+
 # Update repository and feeds
 git pull
 ./scripts/feeds update -a
@@ -36,6 +42,7 @@ git pull
 # Disable specified packages
 disableDuplicatedPkg "feeds/pw" "${pwPatterns[@]}"
 disableDuplicatedPkg "feeds/packages" "${packagesPatterns[@]}"
+disableDuplicatedPkg "feeds/luci" "${luciPatterns[@]}"
 
 # Install feeds
 ./scripts/feeds update -i

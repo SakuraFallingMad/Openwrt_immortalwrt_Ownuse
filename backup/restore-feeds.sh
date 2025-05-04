@@ -7,6 +7,7 @@ directories=(
     "routing"
     "telephony"
     "pw"
+    "argon"
 )
 
 # Save the initial directory
