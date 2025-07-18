@@ -16,8 +16,7 @@ config smartdns
 	option auto_set_dnsmasq '0'
 	option force_aaaa_soa '0'
 	option force_https_soa '0'
-	option rr_ttl_min '2400'
-	option rr_ttl_max '86400'
+	option rr_ttl_min '300'
 	option seconddns_port '7053'
 	option seconddns_tcp_server '1'
 	option seconddns_server_group 'overseas'
@@ -55,14 +54,6 @@ config server
 	option server_group 'overseas'
 
 config server
-	option name 'CUS-MappleCool DOH'
-	option type 'https'
-	option server_group 'domestic'
-	option ip 'https://doh.apad.pro/dns-query'
-	option enabled '1'
-	option host_name 'doh.apad.pro'
-
-config server
 	option enabled '1'
 	option name 'CUS- atri DOH'
 	option ip 'https://api.atri.zip/dns-query'
@@ -70,29 +61,3 @@ config server
 	option server_group 'domestic'
 	option host_name 'api.atri.zip'
 
-config server
-	option enabled '1'
-	option name 'CUS-18bit DOH'
-	option ip 'https://doh.18bit.cn/dns-query'
-	option type 'https'
-	option server_group 'domestic'
-	option blacklist_ip '1'
-	option host_name 'doh.18bit.cn'
-
-config server
-	option enabled '1'
-	option name 'CUS-OneDNS DOH'
-	option ip 'https://doh-pure.onedns.net/dns-query'
-	option type 'https'
-	option server_group 'domestic'
-	option blacklist_ip '1'
-	option host_name 'doh-pure.onedns.net'
-
-config server
-	option enabled '1'
-	option name 'CUS-ipv4dns DOH'
-	option ip 'https://dns.ipv4dns.com/dns-query'
-	option type 'https'
-	option server_group 'domestic'
-	option blacklist_ip '1'
-	option host_name 'dns.ipv4dns.com'
