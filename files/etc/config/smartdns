@@ -26,41 +26,88 @@ config domain-rule
 config ip-rule
 
 config server
-	option name 'CN-BOOTSTRAP ALI DOH'
+	option enabled '1'
+	option name 'ALI DOH_BOOTSTRAP'
 	option ip 'https://223.5.5.5/dns-query'
 	option type 'https'
+	option server_group 'bootstrap'
+	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option enabled '1'
-	option addition_arg '-bootstrap-dns'
+	option tls_host_verify 'dns.alidns.com'
 	option host_name 'dns.alidns.com'
 	option http_host 'dns.alidns.com'
+	option addition_arg '-bootstrap-dns'
 
 config server
-	option name 'CN-BOOTSTRAP DNSPOD DOH'
+	option enabled '1'
+	option name 'DNSPOD DOH_BOOTSTRAP'
 	option ip 'https://120.53.53.53/dns-query'
 	option type 'https'
+	option server_group 'bootstrap'
+	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option enabled '1'
+	option tls_host_verify 'dot.pub'
+	option host_name 'dot.pub'
+	option http_host 'dot.pub'
 	option addition_arg '-bootstrap-dns'
-	option host_name 'doh.pub'
-	option http_host 'doh.pub'
 
 config server
 	option enabled '1'
-	option name 'GoogleDNS_Overseas'
-	option ip 'https://8.8.8.8/dns-query'
-	option type 'https'
-	option blacklist_ip '1'
-	option enabled '1'
-	option host_name 'dns.google'
-	option http_host 'dns.google'
-	option server_group 'overseas'
-
-config server
-	option enabled '1'
-	option name 'CUS- atri DOH'
-	option ip 'https://api.atri.zip/dns-query'
+	option name 'DNSPOD DOH'
+	option ip 'https://sm2.doh.pub/dns-query'
 	option type 'https'
 	option server_group 'domestic'
+	option blacklist_ip '1'
+	option tls_host_verify 'sm2.doh.pub'
+	option host_name 'sm2.doh.pub'
+
+config server
+	option enabled '1'
+	option name 'ALI DOH'
+	option ip 'h3://dns.alidns.com/dns-query'
+	option type 'h3'
+	option server_group 'domestic'
+	option blacklist_ip '1'
+	option tls_host_verify 'dns.alidns.com'
+	option host_name 'dns.alidns.com'
+
+config server
+	option enabled '1'
+	option name '360 DOH'
+	option ip 'https://doh.360.cn/dns-query'
+	option type 'https'
+	option server_group 'domestic'
+	option blacklist_ip '1'
+	option tls_host_verify 'doh.360.cn'
+	option host_name 'doh.360.cn'
+
+config server
+	option enabled '1'
+	option name 'atri DOH'
+	option ip 'https://api.atri.zip/dns-query'
+	option type 'https'
+	option server_group 'overseas'
+	option blacklist_ip '1'
+	option tls_host_verify 'api.atri.zip'
 	option host_name 'api.atri.zip'
+
+config server
+	option enabled '1'
+	option name 'GoogleDNS'
+	option ip 'https://dns.google/dns-query'
+	option type 'https'
+	option server_group 'overseas'
+	option blacklist_ip '1'
+	option tls_host_verify 'dns.google'
+	option host_name 'dns.google'
+
+config server
+	option enabled '1'
+	option name 'CloudflareDNS'
+	option ip 'https://dns.cloudflare.com/dns-query'
+	option type 'https'
+	option server_group 'overseas'
+	option blacklist_ip '1'
+	option tls_host_verify 'dns.cloudflare.com'
+	option host_name 'dns.cloudflare.com'
 
