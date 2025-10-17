@@ -27,7 +27,7 @@ config ip-rule
 
 config server
 	option enabled '1'
-	option name 'ALI DOH_BOOTSTRAP'
+	option name 'ALI DoH_BOOTSTRAP'
 	option ip 'https://223.5.5.5/dns-query'
 	option type 'https'
 	option server_group 'bootstrap'
@@ -40,7 +40,7 @@ config server
 
 config server
 	option enabled '1'
-	option name 'DNSPOD DOH_BOOTSTRAP'
+	option name 'DNSPOD DoH_BOOTSTRAP'
 	option ip 'https://120.53.53.53/dns-query'
 	option type 'https'
 	option server_group 'bootstrap'
@@ -53,7 +53,7 @@ config server
 
 config server
 	option enabled '1'
-	option name 'DNSPOD DOH'
+	option name 'DNSPOD DoH'
 	option ip 'https://sm2.doh.pub/dns-query'
 	option type 'https'
 	option server_group 'domestic'
@@ -63,7 +63,7 @@ config server
 
 config server
 	option enabled '1'
-	option name 'ALI DOH'
+	option name 'ALI DoH'
 	option ip 'h3://dns.alidns.com/dns-query'
 	option type 'h3'
 	option server_group 'domestic'
@@ -73,7 +73,7 @@ config server
 
 config server
 	option enabled '1'
-	option name '360 DOH'
+	option name '360 DoH'
 	option ip 'https://doh.360.cn/dns-query'
 	option type 'https'
 	option server_group 'domestic'
@@ -83,7 +83,7 @@ config server
 
 config server
 	option enabled '1'
-	option name 'atri DOH'
+	option name 'atri DoH'
 	option ip 'https://api.atri.zip/dns-query'
 	option type 'https'
 	option server_group 'overseas'
@@ -93,7 +93,7 @@ config server
 
 config server
 	option enabled '1'
-	option name 'GoogleDNS'
+	option name 'GoogleDNS DoH'
 	option ip 'https://dns.google/dns-query'
 	option type 'https'
 	option server_group 'overseas'
@@ -103,7 +103,7 @@ config server
 
 config server
 	option enabled '1'
-	option name 'CloudflareDNS'
+	option name 'CloudflareDNS DoH'
 	option ip 'https://dns.cloudflare.com/dns-query'
 	option type 'https'
 	option server_group 'overseas'
