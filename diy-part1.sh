@@ -44,6 +44,8 @@ pwPatterns=(
 
 packagesPatterns=(
     "net/*xray*"
+    "net/hysteria"
+    "net/microsocks"
 )
 
 # Update repository and feeds
