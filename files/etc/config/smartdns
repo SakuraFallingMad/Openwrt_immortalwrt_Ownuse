@@ -33,8 +33,6 @@ config server
 	option server_group 'bootstrap'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option tls_host_verify 'dns.alidns.com'
-	option host_name 'dns.alidns.com'
 	option http_host 'dns.alidns.com'
 	option addition_arg '-bootstrap-dns'
 
@@ -46,9 +44,7 @@ config server
 	option server_group 'bootstrap'
 	option exclude_default_group '1'
 	option blacklist_ip '1'
-	option tls_host_verify 'dot.pub'
-	option host_name 'dot.pub'
-	option http_host 'dot.pub'
+	option http_host 'doh.pub'
 	option addition_arg '-bootstrap-dns'
 
 config server
@@ -58,8 +54,6 @@ config server
 	option type 'https'
 	option server_group 'domestic'
 	option blacklist_ip '1'
-	option tls_host_verify 'sm2.doh.pub'
-	option host_name 'sm2.doh.pub'
 
 config server
 	option enabled '1'
@@ -68,8 +62,6 @@ config server
 	option type 'h3'
 	option server_group 'domestic'
 	option blacklist_ip '1'
-	option tls_host_verify 'dns.alidns.com'
-	option host_name 'dns.alidns.com'
 
 config server
 	option enabled '1'
@@ -78,8 +70,6 @@ config server
 	option type 'https'
 	option server_group 'domestic'
 	option blacklist_ip '1'
-	option tls_host_verify 'doh.360.cn'
-	option host_name 'doh.360.cn'
 
 config server
 	option enabled '1'
@@ -88,8 +78,6 @@ config server
 	option type 'https'
 	option server_group 'overseas'
 	option blacklist_ip '1'
-	option tls_host_verify 'api.atri.zip'
-	option host_name 'api.atri.zip'
 
 config server
 	option enabled '1'
@@ -98,8 +86,6 @@ config server
 	option type 'https'
 	option server_group 'overseas'
 	option blacklist_ip '1'
-	option tls_host_verify 'dns.google'
-	option host_name 'dns.google'
 
 config server
 	option enabled '1'
@@ -108,6 +94,4 @@ config server
 	option type 'https'
 	option server_group 'overseas'
 	option blacklist_ip '1'
-	option tls_host_verify 'dns.cloudflare.com'
-	option host_name 'dns.cloudflare.com'
 
