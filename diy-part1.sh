@@ -50,7 +50,7 @@ packagesPatterns=(
 
 # Update repository and feeds
 git pull
-./scripts/feeds update -a
+./scripts/feeds update -f
 
 # Disable specified packages
 disableDuplicatedPkg "feeds/pw" "${pwPatterns[@]}"
