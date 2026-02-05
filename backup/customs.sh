@@ -20,12 +20,12 @@ disableDuplicatedPkg() {
 
 # Patterns for each directory
 pwPatterns=(
-    "*v2ray*"
     "*sing*"
     "naiveproxy"
 )
 
 packagesPatterns=(
+    "net/*v2ray-*"
     "net/*xray*"
     "net/hysteria"
 )
