@@ -22,13 +22,13 @@ disableDuplicatedPkg() {
 pwPatterns=(
     "*sing*"
     "naiveproxy"
+    "tuic-client"
 )
 
 packagesPatterns=(
     "net/*v2ray-*"
     "net/*xray*"
     "net/hysteria"
-    "net/tuic-client"
 )
 
 # Update repository and feeds
