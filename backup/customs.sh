@@ -29,6 +29,7 @@ packagesPatterns=(
     "net/*v2ray-*"
     "net/*xray*"
     "net/hysteria"
+    "net/microsocks"
 )
 
 # Update repository and feeds
