@@ -22,7 +22,6 @@ disableDuplicatedPkg() {
 pwPatterns=(
     "*sing*"
     "naiveproxy"
-    "tuic-client"
 )
 
 packagesPatterns=(
