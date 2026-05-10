@@ -38,7 +38,6 @@ disableDuplicatedPkg() {
 # Patterns for each directory
 pwPatterns=(
     "*sing*"
-    "naiveproxy"
 )
 
 packagesPatterns=(
@@ -46,6 +45,7 @@ packagesPatterns=(
     "net/*xray*"
     "net/hysteria"
     "net/microsocks"
+    "net/naiveproxy"
 )
 
 # Update repository and feeds
