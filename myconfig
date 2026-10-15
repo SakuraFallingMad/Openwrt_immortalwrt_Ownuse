@@ -209,6 +209,7 @@ CONFIG_PACKAGE_libavahi-dbus-support=y
 CONFIG_PACKAGE_libbpf=y
 CONFIG_PACKAGE_libcap=y
 CONFIG_PACKAGE_libcap-ng=y
+CONFIG_PACKAGE_libcronet=y
 CONFIG_PACKAGE_libcurl=y
 CONFIG_PACKAGE_libdaemon=y
 CONFIG_PACKAGE_libdbus=y
